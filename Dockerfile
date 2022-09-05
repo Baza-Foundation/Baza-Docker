@@ -36,7 +36,7 @@ RUN set -eux; \
     gosu nobody true
 RUN set -eux; \
     apt-get update; \
-    apt-get install -y --no-install-recommends wget
+    apt-get install -y --no-install-recommends wget xz-utils
 RUN set -eux; \
     mkdir /baza-bin; \
     cd /baza-bin; \

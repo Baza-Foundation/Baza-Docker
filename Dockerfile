@@ -35,6 +35,9 @@ RUN set -eux; \
     gosu --version; \
     gosu nobody true
 RUN set -eux; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends wget
+RUN set -eux; \
     mkdir /baza-bin; \
     cd /baza-bin; \
     wget https://gitlab.ekata.io/baza-foundation/baz-token/uploads/3cc80902bc065c25213575640da312e7/baza-0.0.1.8-linux.tar.xz; \

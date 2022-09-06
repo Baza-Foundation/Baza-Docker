@@ -20,7 +20,7 @@
     "p2p-bind-ip": "0.0.0.0",
     "p2p-bind-port": 11753,
     "p2p-external-port": 0,
-    "rpc-bind-ip": "127.0.0.1",
+    "rpc-bind-ip": "0.0.0.0",
     "rpc-bind-port": 11754,
     "seed-node": [],
     "sqlite": false

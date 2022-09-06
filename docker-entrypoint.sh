@@ -2,6 +2,7 @@
 set -e
 
 mkdir -p /data/Baza
+chmod 700 /data/Baza
 
 # First argument is a flag, assuming user wants to run bazad
 if [ "${1:0:1}" = '-' ]; then

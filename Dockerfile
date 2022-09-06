@@ -44,7 +44,7 @@ RUN set -eux; \
     tar -xvf "baza-0.0.1.8-linux.tar.xz"; \
     cp bazad /bin
 RUN rm -rf /baza-bin
-RUN mkdir /data && chown baza:baza /data
+RUN mkdir /data && chown baza:baza /data && chmod 777 /data
 VOLUME /data
 WORKDIR /data
 COPY config.json /data/

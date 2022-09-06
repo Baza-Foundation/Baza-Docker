@@ -42,12 +42,12 @@ RUN set -eux; \
     cd /baza-bin; \
     wget --no-check-certificate https://gitlab.ekata.io/baza-foundation/baz-token/uploads/3cc80902bc065c25213575640da312e7/baza-0.0.1.8-linux.tar.xz; \
     tar -xvf "baza-0.0.1.8-linux.tar.xz"; \
-    cp bazad /usr/local/bin
+    cp bazad /bin
 RUN rm -rf /baza-bin
 RUN mkdir /data && chown baza:baza /data
 VOLUME /data
 WORKDIR /data
 COPY config.json /data/
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY docker-entrypoint.sh /bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["bazad", "-c", "/data/config.json"]

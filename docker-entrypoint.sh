@@ -6,10 +6,9 @@ if [ "${1:0:1}" = '-' ]; then
 	set -- bazad -c /data/config.json "$@"
 fi
 
-# NOTE: for now user is changed to "baza" even if someone 
-# uses the --user flag, due to failure of creation blockchain
-# db file
-if [ "$1" = 'bazad' ]; then
+# allow the container to be started with `--user`
+if [ "$1" = 'bazad' -a "$(id -u)" = '0' ]; then
+	find /data \! -user baza -exec chown baza '{}' +
 	exec gosu baza "$@"
 fi
 

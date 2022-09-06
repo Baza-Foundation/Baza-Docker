@@ -12,6 +12,6 @@ if [ "$1" = 'bazad' -a "$(id -u)" = '0' ]; then
 fi
 # NOTE: Not sure about this, should both uid and gid change, also 
 # is there some better option fot this
-chown $(id -u):$(id -g) /data
+gosu baza chown $(id -u):$(id -g) /data
 
 exec "$@"

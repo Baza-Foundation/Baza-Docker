@@ -47,7 +47,8 @@ RUN rm -rf /baza-bin
 RUN mkdir /data && chown baza:baza /data && chmod 777 /data
 VOLUME /data
 WORKDIR /data
-COPY config.json /data/
+RUN mkdir -p /etc/baza
+COPY config.json /etc/baza/
 COPY docker-entrypoint.sh /bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["bazad", "-c", "/data/config.json"]
+CMD ["bazad", "-c", "/etc/baza/config.json"]

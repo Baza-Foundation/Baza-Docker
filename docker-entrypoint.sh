@@ -9,7 +9,8 @@ if [ "${1:0:1}" = '-' ]; then
 	set -- bazad -c /data/config.json "$@"
 fi
 
-# allow the container to be started with `--user`
+# Change file ownership to baza if running as root
+# and drop privilege to baza
 if [ "$1" = 'bazad' -a "$(id -u)" = '0' ]; then
 	find /data \! -user baza -exec chown baza '{}' +
 	exec gosu baza "$@"

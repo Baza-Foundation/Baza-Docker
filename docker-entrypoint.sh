@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 # First argument is a flag, assuming user wants to run bazad

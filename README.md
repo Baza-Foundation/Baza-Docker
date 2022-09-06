@@ -29,3 +29,7 @@ docker run -it -v ~/baza-data:/data -p 127.0.0.1:11754:11754 -p 0.0.0.0:11753:11
 For `docker-compose.yml` file please check following link
 
 [gitlab.ekata.io/baza-foundation/baza-docker/-/blob/main/docker-compose.yml](https://gitlab.ekata.io/baza-foundation/baza-docker/-/blob/main/docker-compose.yml)
+
+Have questions, connect to our discord server
+
+[discord.gg/De92vhVD2m](https://discord.gg/De92vhVD2m)

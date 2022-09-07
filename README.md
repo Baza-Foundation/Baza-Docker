@@ -33,3 +33,5 @@ For `docker-compose.yml` file please check following link
 Have questions, connect to our discord server
 
 [discord.gg/De92vhVD2m](https://discord.gg/De92vhVD2m)
+
+NOTE: If you are running the container with --user flag and using a host directory to mount volume, you should create the directory first with same user ownership or change ownership of the directory to avoid failed to create directory error.

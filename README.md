@@ -1,4 +1,4 @@
-### Official Container for baza daemon
+### Official Container image for baza daemon
 
 Homepage: [baza.foundation](https://baza.foundation)
 

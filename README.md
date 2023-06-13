@@ -1,11 +1,3 @@
-### Official Container Image for The $BAZA Daemon
-
-Homepage: [baza.foundation](https://baza.foundation)
-
-Repository: [gitlab.ekata.io/baza-foundation/baza-docker](https://gitlab.ekata.io/baza-foundation/baza-docker)
-
-Dockerfile: [gitlab.ekata.io/baza-foundation/baza-docker/-/blob/main/Dockerfile](https://gitlab.ekata.io/baza-foundation/baza-docker/-/blob/main/Dockerfile)
-
 #### To start a container
 
 -   Pull the image
@@ -25,13 +17,5 @@ docker run -it -v ~/baza-data:/data -p 127.0.0.1:11754:11754 -p 0.0.0.0:11753:11
 ```bash
 docker run -it -v ~/baza-data:/data -p 127.0.0.1:11754:11754 -p 0.0.0.0:11753:11753 ewarehouse/bazad --enable-blockexplorer
 ```
-
-For `docker-compose.yml` file please check the following link
-
-[gitlab.ekata.io/baza-foundation/baza-docker/-/blob/main/docker-compose.yml](https://gitlab.ekata.io/baza-foundation/baza-docker/-/blob/main/docker-compose.yml)
-
-Have questions, connect to our discord server
-
-[discord.gg/De92vhVD2m](https://discord.gg/De92vhVD2m)
 
 NOTE: If you are running the container with --user flag and using a host directory to mount volume. You should create the directory first with same user ownership or change ownership of the directory to avoid `failed to create directory error`.
